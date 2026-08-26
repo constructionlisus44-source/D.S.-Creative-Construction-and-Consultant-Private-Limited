@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.S. Creative Construction & Consultant Pvt. Ltd.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            yellow: '#F59E0B',
+                            dark: '#0F172A',
+                            accent: '#2563EB',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .img-hover {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        .img-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+    <!-- Top Info Bar -->
+    <div class="bg-brand-dark text-slate-300 text-sm py-2 px-4 border-b border-slate-700 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-brand-yellow mr-2"></i>Ward-32, Tinkune, Kathmandu, Nepal</span>
+                <span><i class="fa-solid fa-envelope text-brand-yellow mr-2"></i>constructionlisus44@gmail.com</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-phone text-brand-yellow mr-2"></i>+977 9847387244</span>
+                <a href="https://wa.me/9779847387244" target="_blank" class="text-green-400 hover:text-green-300 font-semibold flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp"></i> Chat Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-brand-yellow text-brand-dark flex items-center justify-center rounded-lg font-bold text-2xl shadow-lg">
+                        DS
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg md:text-xl text-brand-dark block leading-tight">D.S. Creative</span>
+                        <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Construction & Consultant</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-brand-yellow transition">Home</a>
+                    <a href="#about" class="hover:text-brand-yellow transition">About Us</a>
+                    <a href="#services" class="hover:text-brand-yellow transition">Services</a>
+                    <a href="#projects" class="hover:text-brand-yellow transition">Projects</a>
+                    <a href="#contact" class="hover:text-brand-yellow transition">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-brand-yellow hover:bg-amber-600 text-brand-dark font-semibold px-5 py-2.5 rounded-lg shadow-md transition transform hover:-translate-y-0.5">
+                        Get a Quote
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 font-medium">Home</a>
+            <a href="#about" class="block py-2 text-slate-700 font-medium">About Us</a>
+            <a href="#services" class="block py-2 text-slate-700 font-medium">Services</a>
+            <a href="#projects" class="block py-2 text-slate-700 font-medium">Projects</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium">Contact</a>
+            <a href="#contact" class="block w-full text-center bg-brand-yellow text-brand-dark font-semibold py-2 rounded-lg">Get a Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[85vh] flex items-center text-white px-4 relative">
+        <div class="max-w-7xl mx-auto py-16 lg:py-24">
+            <div class="max-w-3xl space-y-6">
+                <div class="inline-flex items-center gap-2 bg-brand-yellow/20 border border-brand-yellow text-brand-yellow px-4 py-1.5 rounded-full text-sm font-semibold">
+                    <i class="fa-solid fa-hard-hat"></i> Registered Legal Construction & Engineering Firm
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    Building Nepal's Vision With Precision & Excellence
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300">
+                    Comprehensive civil engineering, structural consultancy, and general contracting services in Kathmandu and across Nepal.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="bg-brand-yellow hover:bg-amber-600 text-brand-dark font-bold px-8 py-3.5 rounded-lg shadow-lg transition transform hover:scale-105">
+                        Start Your Project
+                    </a>
+                    <a href="#services" class="bg-slate-800/80 hover:bg-slate-800 text-white font-semibold px-8 py-3.5 rounded-lg border border-slate-600 transition">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics -->
+    <section class="max-w-7xl mx-auto px-4 -mt-12 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-slate-100">
+            <div class="text-center p-4 border-r border-slate-100 last:border-none">
+                <span class="block text-3xl md:text-4xl font-extrabold text-brand-yellow">4+</span>
+                <span class="text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide">Years Experience</span>
+            </div>
+            <div class="text-center p-4 border-r border-slate-100 last:border-none">
+                <span class="block text-3xl md:text-4xl font-extrabold text-brand-dark">50+</span>
+                <span class="text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide">Projects Completed</span>
+            </div>
+            <div class="text-center p-4 border-r border-slate-100 last:border-none">
+                <span class="block text-3xl md:text-4xl font-extrabold text-brand-yellow">100%</span>
+                <span class="text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide">Client Satisfaction</span>
+            </div>
+            <div class="text-center p-4">
+                <span class="block text-3xl md:text-4xl font-extrabold text-brand-dark">15+</span>
+                <span class="text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide">Expert Engineers</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us & CEO Section -->
+    <section id="about" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- CEO Photo Box -->
+            <div class="relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="ceo.jpg" alt="CEO Susil Basyal" class="w-full h-[450px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop'">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-brand-dark text-white p-6 rounded-xl shadow-xl hidden sm:block max-w-xs border-l-4 border-brand-yellow">
+                    <h4 class="font-bold text-lg">Susil Basyal</h4>
+                    <p class="text-xs text-brand-yellow font-medium">Chief Executive Officer (CEO)</p>
+                    <p class="text-xs text-slate-400 mt-2">"Quality and integrity are the core foundations of every structure we build."</p>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="space-y-6">
+                <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                    About Our Firm
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">
+                    D.S. Creative Construction & Consultant Pvt. Ltd.
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Established with a vision to deliver exceptional engineering solutions, D.S. Creative Construction and Consultant Pvt. Ltd. is a registered construction firm located in Tinkune, Kathmandu. 
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Over our 4 years of operational excellence, we have successfully completed residential, commercial, and structural consultancy projects adhering strictly to government regulations and standard safety practices.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-yellow text-xl mt-1"></i>
+                        <div>
+                            <h5 class="font-semibold text-slate-800">Govt. Registered</h5>
+                            <p class="text-xs text-slate-500">PAN & Office of Registrar Certified</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-yellow text-xl mt-1"></i>
+                        <div>
+                            <h5 class="font-semibold text-slate-800">Expert Team</h5>
+                            <p class="text-xs text-slate-500">Licensed Civil & Structural Engineers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-100 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">What We Offer</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Our Core Engineering Services</h2>
+                <p class="text-slate-600">From structural blueprints to complete turnkey building solutions.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-amber-100 text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-dark rounded-xl flex items-center justify-center text-2xl mb-6 transition">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">Building Construction</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Complete residential and commercial construction services executed with high grade material standard and seismic resilience.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-amber-100 text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-dark rounded-xl flex items-center justify-center text-2xl mb-6 transition">
+                        <i class="fa-solid fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">Architectural & 3D Design</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Modern architectural mapping, interior design, 3D rendering, and municipal approval map preparation.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-amber-100 text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-dark rounded-xl flex items-center justify-center text-2xl mb-6 transition">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">Structural Engineering</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Precise structural analysis, estimation, costing, and safety consultation for modern durable infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="projects" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">Portfolio</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Featured Construction Projects</h2>
+            <p class="text-slate-600">A glimpse of our recent structural developments and architectural work.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="relative overflow-hidden rounded-xl shadow-lg group">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Commercial Project" class="w-full h-72 object-cover img-hover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <div class="text-white">
+                        <h4 class="font-bold text-lg">Commercial Complex</h4>
+                        <p class="text-xs text-amber-400">Kathmandu, Nepal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-xl shadow-lg group">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Residential Villa" class="w-full h-72 object-cover img-hover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <div class="text-white">
+                        <h4 class="font-bold text-lg">Modern Residential Building</h4>
+                        <p class="text-xs text-amber-400">Structural Design & Build</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-xl shadow-lg group">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop" alt="Structural Engineering" class="w-full h-72 object-cover img-hover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <div class="text-white">
+                        <h4 class="font-bold text-lg">Engineering & Surveying</h4>
+                        <p class="text-xs text-amber-400">Consultancy Services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & WhatsApp Redirect Form -->
+    <section id="contact" class="py-20 bg-slate-900 text-white px-4">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div class="space-y-6">
+                <span class="text-brand-yellow text-xs font-bold uppercase tracking-wider">Get In Touch</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold">Ready to Start Your Construction Project?</h2>
+                <p class="text-slate-400">
+                    Reach out to us directly or fill out the form to instantly initiate a consultation on WhatsApp with our team.
+                </p>
+
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-4 bg-slate-800 p-4 rounded-xl border border-slate-700">
+                        <div class="w-12 h-12 bg-brand-yellow/10 text-brand-yellow rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400">Office Location</p>
+                            <p class="font-semibold text-white">Ward-32, Tinkune, Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-slate-800 p-4 rounded-xl border border-slate-700">
+                        <div class="w-12 h-12 bg-green-500/10 text-green-400 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400">WhatsApp / Phone</p>
+                            <p class="font-semibold text-white">+977 9847387244</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-slate-800 p-4 rounded-xl border border-slate-700">
+                        <div class="w-12 h-12 bg-brand-yellow/10 text-brand-yellow rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400">Email Address</p>
+                            <p class="font-semibold text-white">constructionlisus44@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-2xl">
+                <h3 class="text-2xl font-bold mb-2 text-brand-dark">Send Inquiry</h3>
+                <p class="text-xs text-slate-500 mb-6">Submitting this form will open a direct pre-filled chat in WhatsApp.</p>
+
+                <form id="whatsappForm" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Full Name</label>
+                        <input type="text" id="name" required placeholder="e.g. Ramesh Shrestha" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="e.g. 9800000000" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Service Required</label>
+                        <select id="service" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <option value="Residential Construction">Residential Building Construction</option>
+                            <option value="Commercial Construction">Commercial Construction</option>
+                            <option value="3D & Architectural Design">3D & Architectural Design</option>
+                            <option value="Structural Estimation / Engineering">Structural Estimation / Engineering</option>
+                            <option value="General Consultation">General Consultation</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Project Message</label>
+                        <textarea id="message" rows="3" required placeholder="Tell us about your requirements or plot location..." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 rounded-lg transition flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Send via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-8 px-4 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 D.S. Creative Construction and Consultant Pvt. Ltd. All Rights Reserved.</p>
+        <p class="text-xs text-slate-600 mt-1">PAN: 609827321 | Registered in Kathmandu, Nepal</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // WhatsApp Form Redirect Logic
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Formatted message text for WhatsApp
+            const fullText = `Hello *D.S. Creative Construction*,%0A%0A*New Project Inquiry:*%0A• *Name:* ${encodeURIComponent(name)}%0A• *Phone:* ${encodeURIComponent(phone)}%0A• *Service:* ${encodeURIComponent(service)}%0A• *Message:* ${encodeURIComponent(message)}`;
+
+            // Target phone number: +977 9847387244
+            const whatsappNumber = '9779847387244';
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullText}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>
