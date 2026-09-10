@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>DS Creative Construction & Consultant | Top Builders in Nepal</title>
+    <meta name="description" content="Premium construction, engineering, and architectural solutions in Kathmandu, Nepal. Your Vision, Our Expertise, Build to Last.">
+    <meta name="keywords" content="construction Nepal, builders Kathmandu, batching plant, engineering, renovation, structural engineering">
+    <meta property="og:title" content="DS Creative Construction & Consultant">
+    <meta property="og:description" content="Building Nepal's Future With Precision & Excellence.">
+    <meta property="og:image" content="logo.png">
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <!-- CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#111111',
+                            gold: '#C9A84C',
+                            lightgold: '#E8C97A',
+                            gray: '#888888',
+                            light: '#f5f5f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0a0a0a; color: #f5f5f5; }
+        .glass-nav { background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .text-gradient { background: linear-gradient(135deg, #C9A84C, #E8C97A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-gold { background: linear-gradient(135deg, #C9A84C, #E8C97A); }
+        
+        .btn-primary { 
+            background: linear-gradient(135deg, #C9A84C, #E8C97A); 
+            color: #0a0a0a; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .btn-primary:hover { 
+            box-shadow: 0 10px 25px -5px rgba(201, 168, 76, 0.4); 
+            transform: translateY(-3px); 
+        }
+        
+        .btn-outline {
+            border: 2px solid #C9A84C;
+            color: #C9A84C;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #C9A84C;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+        }
+
+        /* Project Card Hover */
+        .project-card img { transition: transform 0.6s ease; }
+        .project-card:hover img { transform: scale(1.1); }
+        .project-overlay { transition: opacity 0.4s ease; opacity: 0; }
+        .project-card:hover .project-overlay { opacity: 1; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E8C97A; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-black">
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/9779847387244" target="_blank" aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full z-40 transition-all duration-300 py-2" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="logo.png" alt="DS Creative Construction Logo" class="h-12 w-auto group-hover:scale-105 transition-transform">
+                    <span class="font-bold text-xl hidden sm:block text-gradient tracking-wide">DS Creative</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">About</a>
+                    <a href="services.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Services</a>
+                    <a href="projects.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                    <a href="contact.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                    <a href="contact.html" class="btn-primary px-6 py-2.5 rounded-full text-sm">Get Quote</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="text-brand-gold text-2xl focus:outline-none p-2">
+                        <i class="fas fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark/95 backdrop-blur-md border-t border-white/5 absolute w-full shadow-2xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center flex flex-col">
+                <a href="index.html" class="mobile-link block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Home</a>
+                <a href="about.html" class="mobile-link block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">About</a>
+                <a href="services.html" class="mobile-link block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Services</a>
+                <a href="projects.html" class="mobile-link block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Portfolio</a>
+                <a href="contact.html" class="mobile-link block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Contact</a>
+                <a href="contact.html" class="mobile-link btn-primary inline-block mt-4 px-6 py-3 rounded-full mx-auto w-3/4">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=85" alt="Construction Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-black/90 via-brand-black/70 to-brand-black"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-sm font-semibold tracking-widest uppercase mb-6">
+                    Top Construction Firm in Nepal
+                </span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                Building the Future With <br class="hidden md:block">
+                <span class="text-gradient relative inline-block">
+                    Precision & Excellence
+                    <svg class="absolute w-full h-3 -bottom-1 left-0 text-brand-gold opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </span>
+            </h1>
+            
+            <p class="text-brand-gray text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                Premium construction, engineering, batching plants, and architectural solutions tailored to international standards. Your Vision • Our Expertise • Build to Last.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                <a href="projects.html" class="btn-primary px-8 py-4 rounded-full text-lg flex justify-center items-center gap-2">
+                    Explore Our Work <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+                <a href="contact.html" class="btn-outline px-8 py-4 rounded-full text-lg flex justify-center items-center gap-2 bg-brand-black/50 backdrop-blur-sm">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-brand-gray hover:text-brand-gold transition-colors animate-bounce hidden md:block z-10" aria-label="Scroll down">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-10 bg-brand-dark border-y border-white/5 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/5">
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-4xl md:text-5xl font-bold text-brand-light mb-2"><span class="text-brand-gold">4</span>+</h3>
+                    <p class="text-brand-gray text-xs md:text-sm uppercase tracking-wider font-semibold">Years Experience</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-4xl md:text-5xl font-bold text-brand-light mb-2"><span class="text-brand-gold">50</span>+</h3>
+                    <p class="text-brand-gray text-xs md:text-sm uppercase tracking-wider font-semibold">Projects Completed</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="text-4xl md:text-5xl font-bold text-brand-light mb-2"><span class="text-brand-gold">100</span>%</h3>
+                    <p class="text-brand-gray text-xs md:text-sm uppercase tracking-wider font-semibold">Client Satisfaction</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <h3 class="text-4xl md:text-5xl font-bold text-brand-light mb-2"><span class="text-brand-gold">15</span>+</h3>
+                    <p class="text-brand-gray text-xs md:text-sm uppercase tracking-wider font-semibold">Expert Engineers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Chairman Spotlight -->
+                <div class="relative" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="absolute inset-0 bg-brand-gold rounded-2xl transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <div class="relative bg-brand-dark rounded-2xl border border-white/10 overflow-hidden group">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="ceo.png" alt="Susil Basyal - Chairman" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent p-8 pt-20">
+                            <i class="fas fa-quote-left text-4xl text-brand-gold opacity-50 mb-4 block"></i>
+                            <h3 class="text-2xl font-bold text-brand-light mb-1">Susil Basyal</h3>
+                            <p class="text-brand-gold font-semibold uppercase tracking-widest text-xs mb-4">Chairman & Founder</p>
+                            <p class="text-brand-light/90 italic text-sm leading-relaxed">
+                                "Our mission is not just to erect buildings, but to forge lasting legacies. At DS Creative, we blend innovative engineering with unwavering dedication to deliver structures that stand the test of time."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Story -->
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-[2px] w-12 bg-brand-gold"></div>
+                        <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">About Our Firm</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Building the foundation of <span class="text-gradient">tomorrow.</span></h2>
+                    
+                    <p class="text-brand-gray mb-6 leading-relaxed text-lg">
+                        DS Creative Construction & Consultant Pvt. Ltd., headquartered in Kathmandu, is a premier engineering and construction firm dedicated to transforming visions into reality.
+                    </p>
+                    <p class="text-brand-gray mb-8 leading-relaxed">
+                        With proven excellence in the industry, we pride ourselves on adhering to the highest standards of Quality, Reliability, and Professionalism. From large-scale commercial structures to highly specialized industrial batching plant setups, we handle complex architectural challenges with precision.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3 bg-brand-dark p-4 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <div class="bg-brand-gold/10 p-2 rounded-lg text-brand-gold"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Premium Quality</h4>
+                                <p class="text-brand-gray text-xs">International standard materials.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-dark p-4 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <div class="bg-brand-gold/10 p-2 rounded-lg text-brand-gold"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Timely Delivery</h4>
+                                <p class="text-brand-gray text-xs">Strict adherence to schedules.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-dark p-4 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <div class="bg-brand-gold/10 p-2 rounded-lg text-brand-gold"><i class="fas fa-hard-hat"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Expert Team</h4>
+                                <p class="text-brand-gray text-xs">Licensed & certified engineers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-dark p-4 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <div class="bg-brand-gold/10 p-2 rounded-lg text-brand-gold"><i class="fas fa-leaf"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Safe Practices</h4>
+                                <p class="text-brand-gray text-xs">Uncompromising safety standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <div class="flex justify-center items-center gap-4 mb-4">
+                    <div class="h-[2px] w-8 bg-brand-gold"></div>
+                    <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">Our Expertise</span>
+                    <div class="h-[2px] w-8 bg-brand-gold"></div>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Comprehensive Solutions</h2>
+                <p class="text-brand-gray">From ground-up construction to heavy industrial setups, we offer end-to-end services to meet all your infrastructural needs.</p>
+            </div>
+
+            <!-- Batching Plant Highlight -->
+            <div class="bg-gradient-to-r from-brand-black to-brand-dark rounded-3xl p-8 md:p-12 border border-brand-gold/20 mb-16 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+                <div class="flex flex-col lg:flex-row gap-8 items-center relative z-10">
+                    <div class="lg:w-1/3 text-center lg:text-left">
+                        <div class="bg-brand-gold/10 w-20 h-20 rounded-2xl flex items-center justify-center text-brand-gold text-4xl mx-auto lg:mx-0 mb-6">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Industrial Batching Plants</h3>
+                        <p class="text-brand-gray mb-6">Specialized heavy machinery services for large-scale infrastructure across Nepal.</p>
+                        <a href="#contact" class="text-brand-gold font-semibold hover:text-brand-lightgold flex items-center justify-center lg:justify-start gap-2 group">
+                            Inquire Now <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="lg:w-2/3 grid sm:grid-cols-2 gap-4">
+                        <div class="bg-brand-black/50 p-6 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <i class="fas fa-cogs text-xl text-brand-gold mb-3"></i>
+                            <h4 class="font-bold mb-2">Supply & Install</h4>
+                            <p class="text-sm text-brand-gray">Turnkey commissioning of new batching plants.</p>
+                        </div>
+                        <div class="bg-brand-black/50 p-6 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <i class="fas fa-handshake text-xl text-brand-gold mb-3"></i>
+                            <h4 class="font-bold mb-2">Second-Hand Purchase</h4>
+                            <p class="text-sm text-brand-gray">Valuation and procurement of used machinery.</p>
+                        </div>
+                        <div class="bg-brand-black/50 p-6 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <i class="fas fa-tools text-xl text-brand-gold mb-3"></i>
+                            <h4 class="font-bold mb-2">Dismantling</h4>
+                            <p class="text-sm text-brand-gray">Safe teardown of existing machinery.</p>
+                        </div>
+                        <div class="bg-brand-black/50 p-6 rounded-xl border border-white/5 hover:border-brand-gold/30 transition-colors">
+                            <i class="fas fa-truck-loading text-xl text-brand-gold mb-3"></i>
+                            <h4 class="font-bold mb-2">Shifting & Re-install</h4>
+                            <p class="text-sm text-brand-gray">Relocation and setup at new sites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="project-card relative h-80 rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Building Construction" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+                    <div class="project-overlay absolute inset-0 bg-brand-gold/95 backdrop-blur-sm flex items-center justify-center p-6 text-center">
+                        <div>
+                            <p class="text-brand-black font-semibold mb-4">Complete residential and commercial structural development from ground up.</p>
+                            <a href="#contact" class="btn-outline border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-gold px-6 py-2 rounded-full text-sm inline-block">Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transition-transform duration-300 group-hover:translate-y-full">
+                        <i class="fas fa-building text-3xl text-brand-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold">Building Construction</h3>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="project-card relative h-80 rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Renovation" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+                    <div class="project-overlay absolute inset-0 bg-brand-gold/95 backdrop-blur-sm flex items-center justify-center p-6 text-center">
+                        <div>
+                            <p class="text-brand-black font-semibold mb-4">High-end remodeling, interior upgrades, and structural modifications.</p>
+                            <a href="#contact" class="btn-outline border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-gold px-6 py-2 rounded-full text-sm inline-block">Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transition-transform duration-300 group-hover:translate-y-full">
+                        <i class="fas fa-hammer text-3xl text-brand-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold">Renovation</h3>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="project-card relative h-80 rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                    <img src="wiring_image.jpg" alt="Electrical Wiring" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+                    <div class="project-overlay absolute inset-0 bg-brand-gold/95 backdrop-blur-sm flex items-center justify-center p-6 text-center">
+                        <div>
+                            <p class="text-brand-black font-semibold mb-4">Concealed conduit wiring, circuit panels, and comprehensive MEP solutions.</p>
+                            <a href="#contact" class="btn-outline border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-gold px-6 py-2 rounded-full text-sm inline-block">Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transition-transform duration-300 group-hover:translate-y-full">
+                        <i class="fas fa-bolt text-3xl text-brand-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold">Electrical Wiring</h3>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="project-card relative h-80 rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1558618047-3a4e59ccc18c?w=800&q=80" alt="Plumbing" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+                    <div class="project-overlay absolute inset-0 bg-brand-gold/95 backdrop-blur-sm flex items-center justify-center p-6 text-center">
+                        <div>
+                            <p class="text-brand-black font-semibold mb-4">Water supply systems, drainage solutions, and sanitary fittings.</p>
+                            <a href="#contact" class="btn-outline border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-gold px-6 py-2 rounded-full text-sm inline-block">Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transition-transform duration-300 group-hover:translate-y-full">
+                        <i class="fas fa-wrench text-3xl text-brand-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold">Plumbing & Sanitary</h3>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="project-card relative h-80 rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&q=80" alt="Waterproofing" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+                    <div class="project-overlay absolute inset-0 bg-brand-gold/95 backdrop-blur-sm flex items-center justify-center p-6 text-center">
+                        <div>
+                            <p class="text-brand-black font-semibold mb-4">Advanced waterproofing for basements, terraces, and wet areas.</p>
+                            <a href="#contact" class="btn-outline border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-gold px-6 py-2 rounded-full text-sm inline-block">Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transition-transform duration-300 group-hover:translate-y-full">
+                        <i class="fas fa-tint-slash text-3xl text-brand-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold">Waterproofing</h3>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="project-card relative h-80 rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80" alt="Painting" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+                    <div class="project-overlay absolute inset-0 bg-brand-gold/95 backdrop-blur-sm flex items-center justify-center p-6 text-center">
+                        <div>
+                            <p class="text-brand-black font-semibold mb-4">Premium interior and exterior painting, including textures and finishes.</p>
+                            <a href="#contact" class="btn-outline border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-gold px-6 py-2 rounded-full text-sm inline-block">Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transition-transform duration-300 group-hover:translate-y-full">
+                        <i class="fas fa-paint-roller text-3xl text-brand-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold">Painting & Finishing</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio -->
+    <section id="projects" class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-[2px] w-8 bg-brand-gold"></div>
+                        <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">Portfolio</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Works</h2>
+                    <p class="text-brand-gray">A glimpse into our recent construction and engineering projects across Nepal.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#contact" class="btn-outline px-6 py-2 rounded-full text-sm">Start Your Project</a>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Proj 1 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox('image1.jpg', 'Structural Foundation', 'Civil Construction')">
+                    <img src="image1.jpg" alt="Project 1" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">Civil Construction</span>
+                        <h4 class="text-xl font-bold text-white">Structural Foundation & RCC</h4>
+                    </div>
+                </div>
+                <!-- Proj 2 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox('image2.jpg', 'Multi-Story Development', 'Commercial')">
+                    <img src="image2.jpg" alt="Project 2" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">Commercial</span>
+                        <h4 class="text-xl font-bold text-white">Multi-Story Development</h4>
+                    </div>
+                </div>
+                <!-- Proj 3 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox('image3.jpg', 'Villa Superstructure', 'Residential')">
+                    <img src="image3.jpg" alt="Project 3" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">Residential</span>
+                        <h4 class="text-xl font-bold text-white">Villa Superstructure</h4>
+                    </div>
+                </div>
+                <!-- Proj 4 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox('image4.jpg', 'Slab Casting', 'Structural')">
+                    <img src="image4.jpg" alt="Project 4" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">Structural</span>
+                        <h4 class="text-xl font-bold text-white">Framework & Slab Casting</h4>
+                    </div>
+                </div>
+                <!-- Proj 5 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox('image5.jpg', 'Quality Control', 'Engineering')">
+                    <img src="image5.jpg" alt="Project 5" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">Engineering</span>
+                        <h4 class="text-xl font-bold text-white">Site Quality Control</h4>
+                    </div>
+                </div>
+                <!-- Proj 6 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-aos="fade-up" data-aos-delay="600" onclick="openLightbox('image6.jpg', 'Masonry Brickwork', 'Finishing')">
+                    <img src="image6.jpg" alt="Project 6" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">Finishing</span>
+                        <h4 class="text-xl font-bold text-white">Masonry Brickwork</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-brand-dark border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="flex justify-center items-center gap-4 mb-4">
+                    <div class="h-[2px] w-8 bg-brand-gold"></div>
+                    <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">Leadership</span>
+                    <div class="h-[2px] w-8 bg-brand-gold"></div>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Meet Our Directors</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto">The guiding forces behind our operations and excellence.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Director 1 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-white/5 hover:border-brand-gold/30 transition-all duration-300 text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-brand-dark border-2 border-brand-gold/50 flex items-center justify-center text-3xl font-bold text-brand-gold mb-6 group-hover:scale-110 transition-transform">
+                        GT
+                    </div>
+                    <h3 class="text-2xl font-bold mb-1">Ganesh Thapa</h3>
+                    <p class="text-brand-gold font-medium uppercase text-sm mb-4">Director</p>
+                    <a href="tel:+9779841114952" class="inline-flex items-center gap-2 text-brand-gray hover:text-white transition-colors">
+                        <i class="fas fa-phone-alt text-brand-gold"></i> +977 9841114952
+                    </a>
+                </div>
+                
+                <!-- Director 2 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-white/5 hover:border-brand-gold/30 transition-all duration-300 text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-brand-dark border-2 border-brand-gold/50 flex items-center justify-center text-3xl font-bold text-brand-gold mb-6 group-hover:scale-110 transition-transform">
+                        NS
+                    </div>
+                    <h3 class="text-2xl font-bold mb-1">Np Sharma</h3>
+                    <p class="text-brand-gold font-medium uppercase text-sm mb-4">Director</p>
+                    <span class="inline-flex items-center gap-2 text-brand-gray">
+                        <i class="fas fa-envelope text-brand-gold"></i> Executive Board
+                    </span>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-brand-gray mb-6">Supported by a dedicated team of over 15+ specialized engineers, surveyors, and supervisors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-12">
+                
+                <!-- Contact Info & Map -->
+                <div class="lg:col-span-2 flex flex-col gap-8" data-aos="fade-right">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="h-[2px] w-8 bg-brand-gold"></div>
+                            <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">Contact Us</span>
+                        </div>
+                        <h2 class="text-4xl font-bold mb-6">Let's Discuss Your Project</h2>
+                        <p class="text-brand-gray mb-8">Reach out to our experts for consultation, quotes, or general inquiries. We are here to build your vision.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Head Office</h4>
+                                <p class="text-brand-gray text-sm">Ward-32, Tinkune,<br>Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-brand-gray text-sm">+977 9847387244 (Chairman)<br>+977 9807558691 (Office)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-dark border border-white/10 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-brand-gray text-sm break-all">constructionlisus44@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="w-full h-64 rounded-xl overflow-hidden border border-white/10 mt-4">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14131.785315809838!2d85.324333!3d27.659533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM5JzM0LjMiTiA4NcKwMTknMjcuNiJF!5e0!3m2!1sen!2snp!4v1610000000000!5m2!1sen!2snp" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-3" data-aos="fade-left">
+                    <div class="bg-brand-dark p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden">
+                        <!-- Decorative Blob -->
+                        <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-gold/10 rounded-full blur-[50px] pointer-events-none"></div>
+                        
+                        <h3 class="text-2xl font-bold mb-8 relative z-10">Request a Free Quote</h3>
+                        
+                        <form id="contactForm" class="space-y-6 relative z-10">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm text-brand-gray font-medium">Full Name *</label>
+                                    <input type="text" id="name" required class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3.5 text-brand-light focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm text-brand-gray font-medium">Phone Number *</label>
+                                    <input type="tel" id="phone" required class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3.5 text-brand-light focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                                </div>
+                            </div>
+                            
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm text-brand-gray font-medium">Project Location</label>
+                                    <input type="text" id="location" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3.5 text-brand-light focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm text-brand-gray font-medium">Service Required</label>
+                                    <select id="service" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3.5 text-brand-light focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all appearance-none">
+                                        <option value="General Construction">General Construction</option>
+                                        <option value="Batching Plant">Batching Plant & Pump</option>
+                                        <option value="Renovation">Renovation</option>
+                                        <option value="Electrical/Plumbing">Electrical/Plumbing</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="text-sm text-brand-gray font-medium">Message Details</label>
+                                <textarea id="message" rows="4" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3.5 text-brand-light focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full btn-primary py-4 rounded-xl text-lg flex justify-center items-center gap-3 mt-4">
+                                Send Inquiry via WhatsApp <i class="fab fa-whatsapp text-xl"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <img src="logo.png" alt="DS Creative Logo" class="h-16 mb-6">
+                    <p class="text-brand-gray mb-8 max-w-sm leading-relaxed">
+                        DS Creative Construction & Consultant Pvt. Ltd. <br>
+                        Your Vision • Our Expertise • Build to Last.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-black border border-white/10 flex items-center justify-center text-brand-light hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-black border border-white/10 flex items-center justify-center text-brand-light hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-brand-light">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-brand-gray hover:text-brand-gold transition-colors inline-block transform hover:translate-x-1">Home</a></li>
+                        <li><a href="about.html" class="text-brand-gray hover:text-brand-gold transition-colors inline-block transform hover:translate-x-1">About Us</a></li>
+                        <li><a href="services.html" class="text-brand-gray hover:text-brand-gold transition-colors inline-block transform hover:translate-x-1">Services</a></li>
+                        <li><a href="projects.html" class="text-brand-gray hover:text-brand-gold transition-colors inline-block transform hover:translate-x-1">Portfolio</a></li>
+                        <li><a href="index.html#team" class="text-brand-gray hover:text-brand-gold transition-colors inline-block transform hover:translate-x-1">Team</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legals & PAN -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-brand-light">Company Details</h4>
+                    <ul class="space-y-3 text-brand-gray">
+                        <li>Registered in Nepal</li>
+                        <li><span class="text-brand-gold font-medium">PAN No:</span> 609827321</li>
+                        <li>Open Mon - Sat</li>
+                        <li>9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-gray">
+                <p>&copy; 2026 DS Creative Construction & Consultant Pvt. Ltd. All Rights Reserved.</p>
+                <p>Designed with <i class="fas fa-heart text-brand-gold mx-1"></i> in Nepal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm hidden items-center justify-center p-4 flex-col opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-black transition-colors text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" class="max-h-[75vh] max-w-full object-contain mb-8 rounded-lg shadow-2xl">
+        <div class="text-center max-w-2xl bg-brand-dark/80 p-6 rounded-2xl border border-white/10 backdrop-blur-md">
+            <span id="lightbox-cat" class="text-brand-gold text-xs font-bold uppercase tracking-widest mb-2 block"></span>
+            <h3 id="lightbox-title" class="text-2xl font-bold text-white mb-2"></h3>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animations
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-in-out-cubic',
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('py-2');
+            } else {
+                navbar.classList.remove('glass-nav');
+                navbar.classList.add('py-2');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxCat = document.getElementById('lightbox-cat');
+
+        function openLightbox(imgSrc, title, category) {
+            lightboxImg.src = imgSrc;
+            lightboxTitle.innerText = title;
+            lightboxCat.innerText = category;
+            
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            
+            // Trigger reflow for fade in
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightbox.classList.add('opacity-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('opacity-100');
+            lightbox.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                lightbox.classList.remove('flex');
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }, 300);
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+
+        // WhatsApp Form Submit
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const location = document.getElementById('location').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            const text = `*New Inquiry via Website*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Location:* ${location}\n*Service Required:* ${service}\n\n*Message:* ${message}`;
+            const whatsappUrl = `https://wa.me/9779847387244?text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>

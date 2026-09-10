@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DS Creative Construction</title>
+    <meta name="description" content="Learn about DS Creative Construction, our chairman Susil Basyal, and our expert engineering team in Kathmandu, Nepal.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { black: '#0a0a0a', dark: '#111111', gold: '#C9A84C', lightgold: '#E8C97A', gray: '#888888', light: '#f5f5f5' }
+                    },
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0a0a0a; color: #f5f5f5; }
+        .glass-nav { background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .text-gradient { background: linear-gradient(135deg, #C9A84C, #E8C97A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-primary { background: linear-gradient(135deg, #C9A84C, #E8C97A); color: #0a0a0a; font-weight: 600; transition: all 0.3s ease; }
+        .btn-primary:hover { box-shadow: 0 10px 25px -5px rgba(201, 168, 76, 0.4); transform: translateY(-3px); }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 5px; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-black">
+
+    <a href="https://wa.me/9779847387244" target="_blank" aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed w-full z-40 transition-all duration-300 py-2 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="logo.png" alt="DS Creative Construction Logo" class="h-12 w-auto group-hover:scale-105 transition-transform">
+                    <span class="font-bold text-xl hidden sm:block text-gradient tracking-wide">DS Creative</span>
+                </a>
+                <nav class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-brand-gold transition-colors">About</a>
+                    <a href="services.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Services</a>
+                    <a href="projects.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                    <a href="contact.html" class="text-sm font-medium text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                    <a href="contact.html" class="btn-primary px-6 py-2.5 rounded-full text-sm">Get Quote</a>
+                </nav>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="text-brand-gold text-2xl focus:outline-none p-2"><i class="fas fa-bars" id="menu-icon"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark/95 backdrop-blur-md border-t border-white/5 absolute w-full shadow-2xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center flex flex-col">
+                <a href="index.html" class="block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Home</a>
+                <a href="about.html" class="block px-3 py-3 text-brand-gold font-medium rounded-lg">About</a>
+                <a href="services.html" class="block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Services</a>
+                <a href="projects.html" class="block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-3 text-brand-light hover:text-brand-gold font-medium rounded-lg">Contact</a>
+                <a href="contact.html" class="btn-primary inline-block mt-4 px-6 py-3 rounded-full mx-auto w-3/4">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="relative pt-32 pb-16 bg-brand-dark border-b border-white/5 flex flex-col items-center justify-center text-center px-4" style="min-h: 40vh;">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-aos="fade-up">About <span class="text-gradient">Our Firm</span></h1>
+        <p class="text-brand-gray flex items-center justify-center space-x-2" data-aos="fade-up" data-aos-delay="100">
+            <a href="index.html" class="hover:text-brand-gold transition-colors">Home</a>
+            <span class="text-white/30">/</span>
+            <span class="text-brand-gold">About Us</span>
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Chairman Spotlight -->
+                <div class="relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-brand-gold rounded-2xl transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <div class="relative bg-brand-dark rounded-2xl border border-white/10 overflow-hidden group">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="ceo.png" alt="Susil Basyal - Chairman" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent p-8 pt-20">
+                            <i class="fas fa-quote-left text-4xl text-brand-gold opacity-50 mb-4 block"></i>
+                            <h3 class="text-2xl font-bold text-brand-light mb-1">Susil Basyal</h3>
+                            <p class="text-brand-gold font-semibold uppercase tracking-widest text-xs mb-4">Chairman & Founder</p>
+                            <p class="text-brand-light/90 italic text-sm leading-relaxed">
+                                "Our mission is not just to erect buildings, but to forge lasting legacies. At DS Creative, we blend innovative engineering with unwavering dedication to deliver structures that stand the test of time."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Story -->
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Building the foundation of <span class="text-gradient">tomorrow.</span></h2>
+                    <p class="text-brand-gray mb-6 leading-relaxed text-lg">
+                        DS Creative Construction & Consultant Pvt. Ltd., headquartered in Ward-32, Tinkune, Kathmandu, is a premier engineering and construction firm dedicated to transforming visions into reality.
+                    </p>
+                    <p class="text-brand-gray mb-8 leading-relaxed">
+                        With over 4+ years of proven excellence in the industry, we pride ourselves on adhering to the highest standards of Quality, Reliability, and Professionalism. From large-scale commercial structures to highly specialized industrial batching plant setups, our registered firm is equipped with the expertise to handle complex architectural challenges.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3 text-xl"></i> Licensed & Certified Professionals</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3 text-xl"></i> Uncompromising Safety Standards</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3 text-xl"></i> Timely Project Delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 bg-brand-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Meet Our Experts</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto">The brilliant minds and dedicated professionals behind our successful projects.</p>
+            </div>
+
+            <!-- Directors -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                <div class="bg-brand-black p-8 rounded-2xl border border-white/5 hover:border-brand-gold/30 transition-all duration-300 text-center" data-aos="fade-up">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-brand-dark border-2 border-brand-gold/50 flex items-center justify-center text-3xl font-bold text-brand-gold mb-6">GT</div>
+                    <h3 class="text-2xl font-bold mb-1">Ganesh Thapa</h3>
+                    <p class="text-brand-gold font-medium uppercase text-sm mb-4">Director</p>
+                    <a href="tel:+9779841114952" class="inline-flex items-center gap-2 text-brand-gray hover:text-white transition-colors"><i class="fas fa-phone-alt text-brand-gold"></i> +977 9841114952</a>
+                </div>
+                <div class="bg-brand-black p-8 rounded-2xl border border-white/5 hover:border-brand-gold/30 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-brand-dark border-2 border-brand-gold/50 flex items-center justify-center text-3xl font-bold text-brand-gold mb-6">NS</div>
+                    <h3 class="text-2xl font-bold mb-1">Np Sharma</h3>
+                    <p class="text-brand-gold font-medium uppercase text-sm mb-4">Director</p>
+                </div>
+            </div>
+
+            <!-- Engineering & Management -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-brand-black p-6 rounded-2xl border border-white/5 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-brand-dark border border-brand-gold/30 flex items-center justify-center font-bold text-brand-gold mb-4">AG</div>
+                    <h4 class="font-bold mb-1">Arjun Gupta</h4>
+                    <p class="text-brand-gold text-xs uppercase">Civil Engineer</p>
+                </div>
+                <div class="bg-brand-black p-6 rounded-2xl border border-white/5 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-brand-dark border border-brand-gold/30 flex items-center justify-center font-bold text-brand-gold mb-4">AG</div>
+                    <h4 class="font-bold mb-1">Ankit Ghimire</h4>
+                    <p class="text-brand-gold text-xs uppercase">Structural Eng.</p>
+                </div>
+                <div class="bg-brand-black p-6 rounded-2xl border border-white/5 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-brand-dark border border-brand-gold/30 flex items-center justify-center font-bold text-brand-gold mb-4">TO</div>
+                    <h4 class="font-bold mb-1">Tekam Oli</h4>
+                    <p class="text-brand-gold text-xs uppercase">Surveyor</p>
+                </div>
+                <div class="bg-brand-black p-6 rounded-2xl border border-white/5 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-brand-dark border border-brand-gold/30 flex items-center justify-center font-bold text-brand-gold mb-4">NB</div>
+                    <h4 class="font-bold mb-1">Nabin Basyal</h4>
+                    <p class="text-brand-gold text-xs uppercase">Mech. Supervisor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="logo.png" alt="DS Creative Logo" class="h-12 mx-auto mb-6">
+            <p class="text-brand-gray text-sm">&copy; 2026 DS Creative Construction & Consultant Pvt. Ltd. All Rights Reserved. PAN: 609827321</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 800 });
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) { menuIcon.classList.remove('fa-times'); menuIcon.classList.add('fa-bars'); } 
+            else { menuIcon.classList.remove('fa-bars'); menuIcon.classList.add('fa-times'); }
+        });
+    </script>
+</body>
+</html>
